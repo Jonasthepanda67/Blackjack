@@ -14,13 +14,23 @@ This is a school project where we had to create the game Blackjack also called 2
 - [X] Add Basic Blackjack Functions
 - [X] Add Styling file for Html page
 - [ ] Add Html Design
-- [ ] Add so that images get shown on the page
+- [X] Add so that images get shown on the page
 - [ ] Add Multiplayer function
 - [ ] Add Split Function
 - [ ] Add a Dealer for the html
 - [ ] Add a function to bet Chips
 
 ## Changelog
+
+**V1.0.0**
+
+* Added Basic Blackjack funtions
+* Added cards being shown on the page
+* Added dealer cards
+* Added a small amount of styling
+* Added logic for when dealer should draw cards
+* Added points for dealer and player
+* Added logic for losing and wining
 
 **V0.0.2**
 
