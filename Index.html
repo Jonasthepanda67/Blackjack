@@ -11,20 +11,26 @@
 
         <p id="GameStatus"></p>
 
+        <div>
+            <p id="DeckSize" hidden></p>
+        </div>
+
         <div class="card-section">
             <div class="card-grid">
                 <div class="dealer-cards">
-                    <img src="/Card_Images/playing card back.jpg" alt="Back of Card Image">
+                    <img src="/Card_Images/playing card back.jpg" alt="Back of Card Image" id="HiddenDealerCard">
+                    <div id="DealerRevealedCards"></div>
+                    <p>Dealer Points: <span id="DealerPoints">0</span></p>
                 </div>
                 <div class="player-cards">
+                    <p>Player Points: <span id="PlayerPoints">0</span></p>
                 </div>
-                
             </div>
         </div>
 
         <button id="StartBtn" onclick="StartGame()">Start Game</button>
         <button id="HitBtn" onclick="DrawCardPlayer()" hidden>Hit</button>
-        <button id="StandBtn" onclick="" hidden>Stand</button>
+        <button id="StandBtn" onclick="Stand()" hidden>Stand</button>
         <button id="SplitBtn" onclick="" hidden>Split</button>
 
         <script src="Main.js"></script>
