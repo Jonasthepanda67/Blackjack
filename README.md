@@ -25,6 +25,9 @@ This is a school project where we had to create the game Blackjack also called 2
 **V0.0.2**
 
 * Added Placeholders for the basic Blackjack functions
+* Added some basic html
+* Added Stylesheet
+* Added a Start Game function
 
 **V0.0.1**
 
