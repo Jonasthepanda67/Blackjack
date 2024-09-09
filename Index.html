@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Stylesheet.css"></a>
+    <title>Blackjack</title>
+</head>
+<body>
+        <h2>Welcome to this Blackjack game</h2>
+
+        <p id="GameStatus"></p>
+
+        <div class="card-section">
+            <div class="card-grid">
+                <div class="dealer-cards">
+                    <img src="/Card_Images/playing card back.jpg" alt="Back of Card Image">
+                </div>
+                <div class="player-cards">
+                </div>
+                
+            </div>
+        </div>
+
+        <button id="StartBtn" onclick="StartGame()">Start Game</button>
+        <button id="HitBtn" onclick="DrawCardPlayer()" hidden>Hit</button>
+        <button id="StandBtn" onclick="" hidden>Stand</button>
+        <button id="SplitBtn" onclick="" hidden>Split</button>
+
+        <script src="Main.js"></script>
+</body>
+</html>
