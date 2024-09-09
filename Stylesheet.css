@@ -1,3 +1,7 @@
 .dealer-cards img {
     max-width: 10%;
 }
+img {
+    max-width: 150px;
+    max-height: 200px;
+}

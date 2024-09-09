@@ -11,8 +11,8 @@ This is a school project where we had to create the game Blackjack also called 2
 
 ## Todo
 - [X] Add Images
-- [ ] Add Basic Blackjack Functions
-- [ ] Add Styling file for Html page
+- [X] Add Basic Blackjack Functions
+- [X] Add Styling file for Html page
 - [ ] Add Html Design
 - [ ] Add so that images get shown on the page
 - [ ] Add Multiplayer function
