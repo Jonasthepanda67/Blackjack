@@ -4,15 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Stylesheet.css"></a>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>Blackjack</title>
 </head>
 <body>
-        <h2>Welcome to this Blackjack game</h2>
+    <div class="container">
+        <div class="text-center">
+            <h2>Welcome to this Blackjack game</h2>
+        </div>
 
-        <p id="GameStatus"></p>
+        <div class="text-end"></div>
+            <p class="fs-3" id="DeckSize" style="display: none;"></p>
+            <p class="fs-5" id="User">Username: Anonymous</p>
+        </div>
 
         <div>
-            <p id="DeckSize" hidden></p>
+            <p id="GameStatus"></p>
+        </div>
+
+        <div class="pot-section">
+            <div>
+                <div class="pot-header">
+                    <h3>BET</h3>
+                </div>
+                <div class="pot">
+                    <p id="PotTotal"></p>
+                    <div class="chips-section">
+                        <!--Put the different chips here based on the total of the pot-->
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="card-section">
@@ -24,15 +45,33 @@
                 </div>
                 <div class="player-cards">
                     <p>Player Points: <span id="PlayerPoints">0</span></p>
+                    <div id="PlayerCards"></div>
+                </div>
+                <div class="button-section">  
+                    <button class="btn btn-success" id="StartBtn" onclick="StartGame()">Start Game</button>
+                    <button class="btn btn-success" id="NewGameBtn" onclick="NewGame()" style="display: none;">New Game</button>
+                    <button class="btn btn-primary" id="HitBtn" onclick="DrawCardPlayer()" style="display: none;">Hit</button>
+                    <button class="btn btn-secondary" id="StandBtn" onclick="Stand()" style="display: none;">Stand</button>
+                    <button class="btn btn-secondary" id="SplitBtn" onclick="Split()" style="display: none;">Split</button>
                 </div>
             </div>
         </div>
 
-        <button id="StartBtn" onclick="StartGame()">Start Game</button>
-        <button id="HitBtn" onclick="DrawCardPlayer()" hidden>Hit</button>
-        <button id="StandBtn" onclick="Stand()" hidden>Stand</button>
-        <button id="SplitBtn" onclick="" hidden>Split</button>
+        <div class="playerchips-section">
+            <div class="playerchips-header">
+                <h3 id="PlayerChipTotal"></h3>
+            </div>
+            <div class="playerchips-section">
+                <!--Put the different amount of chips based on the total amount of chips the player has-->
+            </div>
+        </div>
+
+        <form name="UsernameForm" action="javascript: InsertUsername()" onsubmit="return ValidateUsername()" method="post">
+        Username:    <input type="text" name="Username">
+        <input class="btn btn-success" type="submit" value="Submit">
+        </form>
 
         <script src="Main.js"></script>
+    </div>
 </body>
 </html>

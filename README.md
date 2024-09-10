@@ -9,6 +9,8 @@ This is a school project where we had to create the game Blackjack also called 2
 
 ## Known Issues
 
+* If the player starts with 21 the new game function doesn't activate
+
 ## Todo
 - [X] Add Images
 - [X] Add Basic Blackjack Functions
@@ -21,6 +23,11 @@ This is a school project where we had to create the game Blackjack also called 2
 - [ ] Add a function to bet Chips
 
 ## Changelog
+
+**V1.0.1**
+
+* Added a username function and display
+* Added the function to start a new game
 
 **V1.0.0**
 
