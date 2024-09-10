@@ -5,15 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Stylesheet.css"></a>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
     <title>Blackjack</title>
 </head>
 <body>
-    <div class="container">
-        <div class="text-center">
-            <h2>Welcome to this Blackjack game</h2>
+    <div class="main-container">
+        <h1>Welcome to this Blackjack game</h1>
+
+        <div class="bet-container">
+            <div class="bet-button" onclick="placeBet(100)">
+                <img src="/100chip.png" alt="100 Chip" class="chip-image">
+            </div>
+            <div class="bet-button" onclick="placeBet(50)">
+                <img src="/50chip.png" alt="50 Chip" class="chip-image">
+            </div>
+            <div class="bet-button" onclick="placeBet(20)">
+                <img src="/20chip.png" alt="20 Chip" class="chip-image">
+            </div>
         </div>
 
-        <div class="text-end"></div>
+        <div class="points-display">
             <p class="fs-3" id="DeckSize" style="display: none;"></p>
             <p class="fs-5" id="User">Username: Anonymous</p>
         </div>
@@ -23,53 +34,65 @@
         </div>
 
         <div class="pot-section">
-            <div>
-                <div class="pot-header">
-                    <h3>BET</h3>
-                </div>
-                <div class="pot">
-                    <p id="PotTotal"></p>
-                    <div class="chips-section">
-                        <!--Put the different chips here based on the total of the pot-->
+            <div class="pot-header">
+                <h3>BET</h3>
+            </div>
+            <div class="pot">
+                <p id="PotTotal"></p>
+                <div class="chips-section">
+                    <div class="chip" onclick="placeBet(100)">
+                        <img src="/100chip.png" alt="100 Chip" class="chip-image">
+                    </div>
+                    <div class="chip" onclick="placeBet(50)">
+                        <img src="/50chip.png" alt="50 Chip" class="chip-image">
+                    </div>
+                    <div class="chip" onclick="placeBet(20)">
+                        <img src="/20chip.png" alt="20 Chip" class="chip-image">
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="card-section">
-            <div class="card-grid">
                 <div class="dealer-cards">
-                    <img src="/Card_Images/playing card back.jpg" alt="Back of Card Image" id="HiddenDealerCard">
+                    <div id="HiddenDealerCard" class="card">
+                        <img src="/Card_Images/playing card back.jpg" alt="Back of Card Image" style="width: 100%;">
+                    </div>
                     <div id="DealerRevealedCards"></div>
                     <p>Dealer Points: <span id="DealerPoints">0</span></p>
                 </div>
+
                 <div class="player-cards">
                     <p>Player Points: <span id="PlayerPoints">0</span></p>
-                    <div id="PlayerCards"></div>
+                    <div id="PlayerCards" class="card"></div>
                 </div>
-                <div class="button-section">  
-                    <button class="btn btn-success" id="StartBtn" onclick="StartGame()">Start Game</button>
-                    <button class="btn btn-success" id="NewGameBtn" onclick="NewGame()" style="display: none;">New Game</button>
-                    <button class="btn btn-primary" id="HitBtn" onclick="DrawCardPlayer()" style="display: none;">Hit</button>
-                    <button class="btn btn-secondary" id="StandBtn" onclick="Stand()" style="display: none;">Stand</button>
-                    <button class="btn btn-secondary" id="SplitBtn" onclick="Split()" style="display: none;">Split</button>
+
+                <div class="action-buttons">  
+                    <button class="action-button" id="StartBtn" onclick="StartGame()">Start Game</button>
+                    <button class="action-button" id="NewGameBtn" onclick="NewGame()" style="display: none;">New Game</button>
+                    <button class="action-button" id="HitBtn" onclick="DrawCardPlayer()" style="display: none;">Hit</button>
+                    <button class="action-button" id="StandBtn" onclick="Stand()" style="display: none;">Stand</button>
+                    <button class="action-button" id="SplitBtn" onclick="Split()" style="display: none;">Split</button>
                 </div>
             </div>
-        </div>
-
+            
         <div class="playerchips-section">
             <div class="playerchips-header">
                 <h3 id="PlayerChipTotal"></h3>
             </div>
             <div class="playerchips-section">
-                <!--Put the different amount of chips based on the total amount of chips the player has-->
+                <div class="chip" style="background-image: url('/100chip.png');"></div>
+                <div class="chip" style="background-image: url('/50chip.png');"></div>
+                <div class="chip" style="background-image: url('/20chip.png');"></div>
             </div>
         </div>
 
-        <form name="UsernameForm" action="javascript: InsertUsername()" onsubmit="return ValidateUsername()" method="post">
-        Username:    <input type="text" name="Username">
-        <input class="btn btn-success" type="submit" value="Submit">
-        </form>
+        <div class="side-container">
+            <form name="UsernameForm" action="javascript: InsertUsername()" onsubmit="return ValidateUsername()" method="post">
+                Username:    <input type="text" name="Username">
+                <input class="action-button" type="submit" value="Submit">
+            </form>
+        </div>        
 
         <script src="Main.js"></script>
     </div>
