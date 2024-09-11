@@ -2,14 +2,14 @@
 **By Jonasthepanda** 
 
 ## Description
-This is a school project where we had to create the game Blackjack also called 21.
+This is a school project where we had to create the game Blackjack also called 21. I made the version of blackjack that i have played before with the rules i think makes most sense.
 
 ## Tags
 *[Tags Link](https://github.com/Jonasthepanda67/Blackjack/tags)*
 
 ## Known Issues
 
-* If the player starts with 21 the new game function doesn't activate
+* If the player starts by clicking the new game button and has 21 points from the start then the dealer will loose no matter what.
 
 ## Todo
 - [X] Add Images
@@ -21,8 +21,14 @@ This is a school project where we had to create the game Blackjack also called 2
 - [ ] Add Split Function
 - [x] Add a Dealer for the html
 - [X] Add a function to bet Chips
+- [X] Add classes
 
 ## Changelog
+
+**V1.0.2**
+
+* Added classes
+* Added Eventhandlers for the basic blackjack buttons
 
 **V1.0.1**
 
