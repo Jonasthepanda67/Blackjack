@@ -1,0 +1,227 @@
+body {
+    background-color: #1e1e1e;
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+.game-table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #121212;
+}
+
+.game-area {
+    position: relative;
+    border-radius: 15px;
+    background-color: #2b2b2b;
+    padding: 30px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    height: 800px;
+    width: 1200px;
+}
+
+.table-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.player-seat {
+    position: absolute;
+    width: 230px;
+    height: 160px;
+    border-radius: 10px;
+    background-color: rgba(52, 58, 64, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    font-weight: bold;
+    color: #00ff00;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.player-info-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.player-info {
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.points {
+    font-size: 16px;
+}
+
+/* Player Positions */
+#player1 {
+    top: 10px;
+    left: 100px;
+}
+
+#player2 {
+    top: 10px;
+    right: 100px;
+}
+
+#player3 {
+    top: 190px;
+    left: 40px;
+}
+
+#player4 {
+    top: 190px;
+    right: 40px;
+}
+
+#player5 {
+    bottom: 280px;
+    left: 40px;
+}
+
+#player6 {
+    bottom: 280px;
+    right: 40px;
+}
+
+#player7 {
+    bottom: 100px;
+    left: 100px;
+}
+
+#player8 {
+    bottom: 100px;
+    right: 100px;
+}
+
+.pot-area {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: yellow;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px 30px;
+    border-radius: 15px;
+}
+
+.dealer-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.dealer-cards {
+    display: flex;
+    justify-content: center;
+}
+
+.player-cards {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.card {
+    width: 50px;
+    height: 70px;
+    background-color: white;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    z-index: 1;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.btn-secondary {
+    background-color: #4e4e4e;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: white;
+    border-radius: 10px;
+}
+
+.btn-secondary:hover {
+    background-color: #6c757d;
+}
+
+.player-avatar-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+    z-index: 5;
+}
+
+.avatar-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #ccc;
+    margin-right: 10px;
+}
+
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.player-name {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    color: white;
+    font-size: 1.2em;
+    outline: none;
+    text-align: center;
+    width: 160px;
+}
+
+.player-name:focus {
+    border-bottom: 1px solid white;
+}
+
+.chip {
+    width: 60px;
+    height: 50px;
+    background-size: cover;
+    cursor: pointer;
+}
+
+/* Highlight the active player */
+.current-turn {
+    border: 3px solid gold;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}

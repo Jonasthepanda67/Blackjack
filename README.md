@@ -9,7 +9,8 @@ This is a school project where we had to create the game Blackjack also called 2
 
 ## Known Issues
 
-* If the player starts by clicking the new game button and has 21 points from the start then the dealer will loose no matter what.
+* when starting a new game no buttons work.
+* if a player starts with 21 it doesn't automatically skip them so they need to press stand manually
 
 ## Todo
 - [X] Add Images
@@ -17,13 +18,18 @@ This is a school project where we had to create the game Blackjack also called 2
 - [X] Add Styling file for Html page
 - [X] Add Html Design
 - [X] Add so that images get shown on the page
-- [ ] Add Multiplayer function
+- [X] Add Multiplayer function
 - [ ] Add Split Function
 - [x] Add a Dealer for the html
 - [X] Add a function to bet Chips
 - [X] Add classes
 
 ## Changelog
+
+**V2.0.0**
+
+* Revamped the design and functions of the game to a more modern design.
+* Bet button is added but not fully implemented
 
 **V1.0.2**
 
