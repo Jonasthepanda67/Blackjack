@@ -86,9 +86,14 @@ const buttons = {
     split: document.querySelector('.controls button:nth-child(4)')
 };
 
+const suits = ['♠', '♥', '♦', '♣'];
+const values = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
+//let deck = [];
 let players = [];
 let dealer = new Dealer();
-let pot = 1000;
+let pot = 0;
+let currentPlayerIndex = 0;
+let gameEnded = false;
 
 function initializePlayers() {
     playerElements.forEach((playerElement, index) => {
@@ -190,15 +195,47 @@ buttons.bet.addEventListener('click', function () {
 });
 
 function dealCard() {
-    const suits = ['♠', '♥', '♦', '♣'];
-    const values = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
     const suit = suits[Math.floor(Math.random() * suits.length)];
     const value = values[Math.floor(Math.random() * values.length)];
+    /*let chosenCard = Math.floor(Math.random() * deck.length);
+    let card = deck.pop(chosenCard);*/
+
     return `${value}${suit}`;
 }
 
-let currentPlayerIndex = 0;
-let gameEnded = false;
+/*function ShuffleDeck() {
+    for (let i = deck.length - 1; i > 0; i--) {
+        const l = Math.floor(Math.random() * (i + 1));
+        [deck[i], deck[l]] = [deck[l], deck[i]];
+    }
+}
+
+function CreateCards() {
+    for (let i = 0; i < suits.length; i++) {
+        for (let l = 0; l < values.length; l++) 
+        {
+            if(values[l] == "Jack" || values[l] == "Queen" || values[l] == "King") 
+            {
+                deck.push({Suit: suits[i], Value: 10, Type: values[l]});
+            }
+            else if(values[l] == "Ace") 
+                {
+                    deck.push({Suit: suits[i], Value: 11, Type: values[l]});
+                }
+            else {
+                deck.push({Suit: suits[i], Value: values[l], Type: values[l]});
+            }
+        }
+    }
+}
+
+function CreateDeck() {
+    deck = [];
+    for (let i = 0; i < 3; i++) {
+        CreateCards();
+    }
+    ShuffleDeck();
+}*/
 
 function nextPlayer() {
     playerElements[currentPlayerIndex].classList.remove('current-turn');
@@ -248,6 +285,7 @@ function cardValue(card) {
 function determineWinners() {
     const dealerValue = dealer.getHandValue();
     let winningPlayers = [];
+    let drawPlayers = [];
     let dealerWins = true;
 
     if (dealerValue > 21) {
@@ -261,6 +299,9 @@ function determineWinners() {
             if (playerHandValue > dealerValue || dealerValue > 21) {
                 winningPlayers.push(player.name);
                 dealerWins = false;
+            } else if (playerHandValue == dealerValue && dealerValue <= 20) {
+                drawPlayers.push(player.name);
+                dealerWins = false;
             }
         }
     });
@@ -269,7 +310,11 @@ function determineWinners() {
     if (dealerWins && winningPlayers.length === 0) {
         resultMessage = `Dealer wins with ${dealerValue} points!`;
     } else if (winningPlayers.length > 0) {
-        resultMessage = `Winners: ${winningPlayers.join(', ')} (Dealer had ${dealerValue} points)`;
+        resultMessage = `Players winning over the dealer: ${winningPlayers.join(', ')} \n\n(Dealer had ${dealerValue} points)`;
+    } else if (winningPlayers.length > 0 && drawPlayers.length > 0) {
+        resultMessage = `Players winning over the dealer: ${winningPlayers.join(', ')} \n\nPlayers that are at a draw with the dealer: ${drawPlayers.join(', ')} \n(Dealer had ${dealerValue} points)`;
+    } else if (drawPlayers.length > 0) {
+        resultMessage = `Players that are at a draw with the dealer: ${drawPlayers.join(', ')} \n\n(Dealer had ${dealerValue} points)`;
     } else {
         resultMessage = `No winners! Dealer had ${dealerValue} points.`;
     }
@@ -323,11 +368,6 @@ function resetGame() {
     updateBalances();
     updatePot();
     updatePlayerUI(currentPlayerIndex);
-
-    buttons.hit.disabled = false;
-    buttons.stand.disabled = false;
-    buttons.bet.disabled = false;
-    buttons.split.disabled = false;
 }
 
 initializePlayers();
