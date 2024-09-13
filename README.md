@@ -26,6 +26,12 @@ This is a school project where we had to create the game Blackjack also called 2
 
 ## Changelog
 
+**V2.0.1**
+
+* Split button is added but not implemented
+* prepared for implementing a deck with 3 * 52 cards to make longer games and cards more random
+* fixed a little bit of styling errors
+
 **V2.0.0**
 
 * Revamped the design and functions of the game to a more modern design.
