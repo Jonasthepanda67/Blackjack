@@ -2,9 +2,9 @@
 **By Jonasthepanda**
 
 ## Table of contents
-- [🔧 Current Tasks & Future Plans](https://github.com/Jonasthepanda67/Blackjack)
-- [🐞 Bug Reporting](https://github.com/Jonasthepanda67/Blackjack)
-- [🔗 Tags & Links](https://github.com/Jonasthepanda67/Blackjack)
+- [🔧 Current Tasks & Future Plans](https://github.com/Jonasthepanda67/Blackjack?tab=readme-ov-file#-current-tasks--future-plans)
+- [🐞 Bug Reporting](https://github.com/Jonasthepanda67/Blackjack?tab=readme-ov-file#-bug-reporting)
+- [🔗 Tags & Links](https://github.com/Jonasthepanda67/Blackjack?tab=readme-ov-file#-tags--links)
 - [📜 Changelog](https://github.com/Jonasthepanda67/Blackjack/tree/main?tab=readme-ov-file#-changelog)
 
 ## 📝 Description
