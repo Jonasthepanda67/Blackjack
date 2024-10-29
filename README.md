@@ -5,7 +5,7 @@
 - [🔧 Current Tasks & Future Plans](https://github.com/Jonasthepanda67/Blackjack)
 - [🐞 Bug Reporting](https://github.com/Jonasthepanda67/Blackjack)
 - [🔗 Tags & Links](https://github.com/Jonasthepanda67/Blackjack)
-- [📜 Changelog](https://github.com/Jonasthepanda67/Blackjack)
+- [📜 Changelog](https://github.com/Jonasthepanda67/Blackjack/tree/main?tab=readme-ov-file#-changelog)
 
 ## 📝 Description
 This is a school project where we had to create the game Blackjack also called 21. I made the version of blackjack that i have played before with the rules i think makes most sense.
