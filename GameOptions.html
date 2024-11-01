@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container-fluid game-table">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 game-area">
+                <div class="table-container">
+                    <div class="gameoptions-player-seat gray-out" id="gameoptions-player1">
+                        <div class="player-avatar-name">
+                            <div class="avatar-circle">
+                                <img src="../Avatars/Default-avatar.png" alt="Avatar" class="avatar-img">
+                            </div>
+                            <input type="text" class="player-name" value="Player 1">
+                        </div>
+                        <div class="player-info-container">
+                            <div class="player-info">$250</div>
+                            <div class="wager">Wager: $0</div>
+                        </div>
+                        <div>
+                            <button class="join-button">Join</button>
+                        </div>
+                        <div class="player-cards">
+                        </div>
+                    </div>
+
+                    <div class="gameoptions-player-seat gray-out" id="gameoptions-player2">
+                        <div class="player-avatar-name">
+                            <div class="avatar-circle">
+                                <img src="../Avatars/Default-avatar.png" alt="Avatar" class="avatar-img">
+                            </div>
+                            <input type="text" class="player-name" value="Player 2">
+                        </div>
+                        <div class="player-info-container">
+                            <div class="player-info">$250</div>
+                            <div class="wager">Wager: $0</div>
+                        </div>
+                        <div>
+                            <button class="join-button">Join</button>
+                        </div>
+                        <div class="player-cards">
+                        </div>
+                    </div>
+
+                    <div class="gameoptions-player-seat gray-out" id="gameoptions-player3">
+                        <div class="player-avatar-name">
+                            <div class="avatar-circle">
+                                <img src="../Avatars/Default-avatar.png" alt="Avatar" class="avatar-img">
+                            </div>
+                            <input type="text" class="player-name" value="Player 3">
+                        </div>
+                        <div class="player-info-container">
+                            <div class="player-info">$250</div>
+                            <div class="wager">Wager: $0</div>
+                        </div>
+                        <div>
+                            <button class="join-button">Join</button>
+                        </div>
+                        <div class="player-cards">
+                        </div>
+                    </div>
+
+                    <div class="gameoptions-player-seat gray-out" id="gameoptions-player4">
+                        <div class="player-avatar-name">
+                            <div class="avatar-circle">
+                                <img src="../Avatars/Default-avatar.png" alt="Avatar" class="avatar-img">
+                            </div>
+                            <input type="text" class="player-name" value="Player 4">
+                        </div>
+                        <div class="player-info-container">
+                            <div class="player-info">$250</div>
+                            <div class="wager">Wager: $0</div>
+                        </div>
+                        <div>
+                            <button class="join-button">Join</button>
+                        </div>
+                        <div class="player-cards">
+                        </div>
+                    </div>
+
+                    <div class="gameoptions-player-seat gray-out" id="gameoptions-player5">
+                        <div class="player-avatar-name">
+                            <div class="avatar-circle">
+                                <img src="../Avatars/Default-avatar.png" alt="Avatar" class="avatar-img">
+                            </div>
+                            <input type="text" class="player-name" value="Player 5">
+                        </div>
+                        <div class="player-info-container">
+                            <div class="player-info">$250</div>
+                            <div class="wager">Wager: $0</div>
+                        </div>
+                        <div>
+                            <button class="join-button">Join</button>
+                        </div>
+                        <div class="player-cards">
+                        </div>
+                    </div>
+
+                    <div class="gameoptions-player-seat gray-out" id="gameoptions-player6">
+                        <div class="player-avatar-name">
+                            <div class="avatar-circle">
+                                <img src="../Avatars/Default-avatar.png" alt="Avatar" class="avatar-img">
+                            </div>
+                            <input type="text" class="player-name" value="Player 6">
+                        </div>
+                        <div class="player-info-container">
+                            <div class="player-info">$250</div>
+                            <div class="wager">Wager: $0</div>
+                        </div>
+                        <div>
+                            <button class="join-button">Join</button>
+                        </div>
+                        <div class="player-cards">
+                        </div>
+                    </div>
+
+                    <div class="gameoptions-player-seat gray-out" id="gameoptions-player7">
+                        <div class="player-avatar-name">
+                            <div class="avatar-circle">
+                                <img src="../Avatars/Default-avatar.png" alt="Avatar" class="avatar-img">
+                            </div>
+                            <input type="text" class="player-name" value="Player 7">
+                        </div>
+                        <div class="player-info-container">
+                            <div class="player-info">$250</div>
+                            <div class="wager">Wager: $0</div>
+                        </div>
+                        <div>
+                            <button class="join-button">Join</button>
+                        </div>
+                        <div class="player-cards">
+                        </div>
+                    </div>
+
+                    <div class="gameoptions-player-seat gray-out" id="gameoptions-player8">
+                        <div class="player-avatar-name">
+                            <div class="avatar-circle">
+                                <img src="../Avatars/Default-avatar.png" alt="Avatar" class="avatar-img">
+                            </div>
+                            <input type="text" class="player-name" value="Player 8">
+                        </div>
+                        <div class="player-info-container">
+                            <div class="player-info">$250</div>
+                            <div class="wager">Wager: $0</div>
+                        </div>
+                        <div>
+                            <button class="join-button">Join</button>
+                        </div>
+                        <div class="player-cards">
+                        </div>
+                    </div>                
+
+                    <div class="game-container">
+                        <div class="card-style-section">
+                            <h2>Card Design</h2>
+                            <div class="card-box-selection">
+                                <select id="cardTypeSelect" class="form-control">
+                                    <option></option>
+                                    <option value="Vector">Classic</option>
+                                    <option value="Skull">Skull</option>
+                                </select>
+                            </div>
+                            <div class="cards">
+                                <div class="game-card">A♠</div>
+                                <div class="game-card">K♦</div>
+                            </div>
+                        </div>
+                        <div class="pot-section">
+                            <div class="pot">
+                                <h2 id="pot">Pot: $0</h2>
+                            </div>
+                            <img src="../20chip.png" alt="20 Chip" class="chip" data-value="20">
+                            <img src="../50chip.png" alt="50 Chip" class="chip" data-value="50">
+                            <img src="../100chip.png" alt="100 Chip" class="chip" data-value="100">
+                        </div>
+                    </div>
+
+                    <div class="controls">
+                        <button class="btn btn-secondary start-game-btn">Start Game</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="avatar-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Select your avatar</h3>
+            <div id="avatar-options" class="avatar-options">
+                <div class="avatar-option" data-avatar="../Avatars/bear-avatar.png">
+                    <img src="../Avatars/bear-avatar.png" alt="Avatar 1">
+                </div>
+                <div class="avatar-option" data-avatar="../Avatars/cat-avatar.png">
+                    <img src="../Avatars/cat-avatar.png" alt="Avatar 2">
+                </div>
+                <div class="avatar-option" data-avatar="../Avatars/chicken-avatar.png">
+                    <img src="../Avatars/chicken-avatar.png" alt="Avatar 3">
+                </div>
+                <div class="avatar-option" data-avatar="../Avatars/cow-avatar.png">
+                    <img src="../Avatars/cow-avatar.png" alt="Avatar 4">
+                </div>
+                <div class="avatar-option" data-avatar="../Avatars/dog-avatar.png">
+                    <img src="../Avatars/dog-avatar.png" alt="Avatar 5">
+                </div>
+                <div class="avatar-option" data-avatar="../Avatars/duck-avatar.png">
+                    <img src="../Avatars/duck-avatar.png" alt="Avatar 6">
+                </div>
+                <div class="avatar-option" data-avatar="../Avatars/elephant-avatar.png">
+                    <img src="../Avatars/elephant-avatar.png" alt="Avatar 7">
+                </div>
+                <div class="avatar-option" data-avatar="../Avatars/koala-avatar.png">
+                    <img src="../Avatars/koala-avatar.png" alt="Avatar 8">
+                </div>
+                <div class="avatar-option" data-avatar="../Avatars/lion-avatar.png">
+                    <img src="../Avatars/lion-avatar.png" alt="Avatar 9">
+                </div>
+                <div class="avatar-option" data-avatar="../Avatars/llama-avatar.png">
+                    <img src="../Avatars/llama-avatar.png" alt="Avatar 10">
+                </div>
+                <div class="avatar-option" data-avatar="../Avatars/man-avatar.png">
+                    <img src="../Avatars/man-avatar.png" alt="Avatar 11">
+                </div>
+                <div class="avatar-option" data-avatar="../Avatars/monkey-avatar.png">
+                    <img src="../Avatars/monkey-avatar.png" alt="Avatar 12">
+                </div>
+                <div class="avatar-option" data-avatar="../Avatars/owl-avatar.png">
+                    <img src="../Avatars/owl-avatar.png" alt="Avatar 13">
+                </div>
+                <div class="avatar-option" data-avatar="../Avatars/panda-avatar.png">
+                    <img src="../Avatars/panda-avatar.png" alt="Avatar 14">
+                </div>
+                <div class="avatar-option" data-avatar="../Avatars/penguin-avatar.png">
+                    <img src="../Avatars/penguin-avatar.png" alt="Avatar 15">
+                </div>
+                <div class="avatar-option" data-avatar="../Avatars/pig-avatar.png">
+                    <img src="../Avatars/pig-avatar.png" alt="Avatar 16">
+                </div>
+                <div class="avatar-option" data-avatar="../Avatars/rabbit-avatar.png">
+                    <img src="../Avatars/rabbit-avatar.png" alt="Avatar 17">
+                </div>
+                <div class="avatar-option" data-avatar="../Avatars/robot-avatar.png">
+                    <img src="../Avatars/robot-avatar.png" alt="Avatar 18">
+                </div>
+                <div class="avatar-option" data-avatar="../Avatars/sheep-avatar.png">
+                    <img src="../Avatars/sheep-avatar.png" alt="Avatar 19">
+                </div>
+                <div class="avatar-option" data-avatar="../Avatars/snake-avatar.png">
+                    <img src="../Avatars/snake-avatar.png" alt="Avatar 20">
+                </div>
+                <div class="avatar-option" data-avatar="../Avatars/wolf-avatar.png">
+                    <img src="../Avatars/wolf-avatar.png" alt="Avatar 21">
+                </div>
+                <div class="avatar-option" data-avatar="../Avatars/woman-avatar.png">
+                    <img src="../Avatars/woman-avatar.png" alt="Avatar 22">
+                </div>
+            </div>
+            <button id="confirm-avatar" class="btn btn-secondary" style="width: 20%; justify-self: center;" disabled>Confirm Avatar</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="../gameOptions.js"></script>
+</body>
+</html>

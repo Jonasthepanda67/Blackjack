@@ -47,6 +47,24 @@ body {
     z-index: 1;
 }
 
+.gameoptions-player-seat {
+    position: absolute;
+    width: 230px;
+    height: 160px;
+    border-radius: 10px;
+    background-color: rgba(52, 58, 64, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    font-weight: bold;
+    color: #00ff00;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    overflow: hidden;
+    z-index: 1;
+}
+
 .player-info-container {
     display: flex;
     align-items: center;
@@ -62,6 +80,35 @@ body {
 
 .points {
     font-size: 16px;
+}
+
+.modal {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 /* Player Positions */
@@ -103,6 +150,104 @@ body {
 #player8 {
     bottom: 100px;
     right: 100px;
+}
+
+/*Gameoptions player positions*/
+#gameoptions-player1 {
+    top: 30px;
+    left: 100px;
+}
+
+#gameoptions-player2 {
+    top: 30px;
+    right: 100px;
+}
+
+#gameoptions-player3 {
+    top: 225px;
+    left: 40px;
+}
+
+#gameoptions-player4 {
+    top: 225px;
+    right: 40px;
+}
+
+#gameoptions-player5 {
+    bottom: 225px;
+    left: 40px;
+}
+
+#gameoptions-player6 {
+    bottom: 225px;
+    right: 40px;
+}
+
+#gameoptions-player7 {
+    bottom: 30px;
+    left: 100px;
+}
+
+#gameoptions-player8 {
+    bottom: 30px;
+    right: 100px;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.card-style-section {
+    background-color: #4f504f;
+    padding: 15px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    /*box-shadow: 0px, 5px, 8px, rgba(0, 0, 0, 0.1);*/
+}
+
+.card-style-section h2 {
+    font-size: 18px;
+    color: #e20e0e;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.card-box-selection {
+    margin-bottom: 10px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.game-card {
+    width: 90px;
+    height: 130px;
+    border-radius: 8px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.pot-section {
+    background-color: #4f504f;
+    padding: 15px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pot h2 {
+    font-size: 20px;
+    color: #def705;
 }
 
 .pot-area {
@@ -155,6 +300,13 @@ body {
     z-index: 1;
 }
 
+.card img {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
+}
+
 .controls {
     display: flex;
     justify-content: space-around;
@@ -183,6 +335,11 @@ body {
     z-index: 5;
 }
 
+.avatar {
+    font-weight: bold;
+    color: blue;
+}
+
 .avatar-circle {
     width: 50px;
     height: 50px;
@@ -196,6 +353,31 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.avatar-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+    gap: 10px;
+}
+
+.avatar-option {
+    cursor: pointer;
+    margin: 5px;
+    border: 2px solid transparent;
+    display: inline-block;
+}
+
+.avatar-option.selected {
+    border: 3px solid gold;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.avatar-option img {
+    width: 80px;
+    height: auto;
 }
 
 .player-name {
@@ -220,8 +402,31 @@ body {
     cursor: pointer;
 }
 
+.current-bet {
+    font-size: 16px;
+    font-weight: bold;
+    color: darkgreen;
+}
+
 /* Highlight the active player */
 .current-turn {
     border: 3px solid gold;
     box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
 }
+
+.join-button {
+    background-color: #097921;
+    border: none;
+    padding: 10px 20px;
+    font-size: 24px;
+    color: white;
+    border-radius: 10px;
+}
+
+.gray-out {
+    opacity: 0.5;
+  }
+  
+  .player-seat.active .join-button {
+    display: none;
+  }
