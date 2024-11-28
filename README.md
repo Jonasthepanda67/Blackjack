@@ -11,7 +11,7 @@
 This is a school project where we had to create the game Blackjack also called 21. I made the version of blackjack that i have played before with the rules i think makes most sense.
 
 ## 💻 Features
-- **Chip betting**: Be any amount you have left into the pot total to win big!!
+- **Chip betting**: Bet any amount you have left into the pot total to win big!!
 - **Multiplayer**: Play with friends and family and see who gets out on top..
 
 ## 🔧 Current Tasks & Future Plans
